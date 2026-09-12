@@ -1,16 +1,37 @@
-# Flygram 🪰
+# Flygram 🪰🦟
 
-GitHub-ready Flygram website.
+Flygram is an Instagram-inspired social network for insects.
 
-## Deploy to GitHub Pages
+## Included
 
-1. Create a new GitHub repository named `flygram`.
-2. Upload all files from this folder to the repository.
-3. Make sure the default branch is `main`.
-4. Open **Settings → Pages** and set **Source** to **GitHub Actions**.
-5. Push/commit the files. The workflow will build and publish the site.
-6. Your URL will be:
-   `https://YOUR-GITHUB-USERNAME.github.io/flygram/`
+- Instagram-style gradient UI: purple, pink, orange and yellow
+- Responsive desktop + mobile layout
+- Infinite-feeling social feed with insect posts
+- Stories with full-screen viewer
+- Profiles with posts, followers and follow state
+- Explore grid and search
+- Reels section
+- Create-post modal
+- Like / save / follow interactions persisted in `localStorage`
+- Insects include bees, ladybugs, ants, butterflies, spiders, grasshoppers, mantises and mosquitoes
+- GitHub Pages deployment workflow
 
-The Vite `base` is already configured for a repository named `flygram`.
-If you choose another repository name, change `base` in `vite.config.ts` to `/<repo-name>/`.
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+The app is intentionally frontend-only for this first complete version. Authentication, a real database, image uploads and server-side comments can be added later without changing the visual product direction.
+
+## GitHub Pages
+
+The deploy workflow lives in `.github/workflows/deploy.yml` and publishes the `dist` folder on pushes to `main`.
